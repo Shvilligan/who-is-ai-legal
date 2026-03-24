@@ -4,8 +4,9 @@ This folder contains a standalone GitHub Pages site for legal pages.
 
 ## Files
 
-- `index.html` - root page (redirects to privacy policy)
+- `index.html` - legal landing page with links
 - `privacy-policy/index.html` - RU/EN privacy policy
+- `terms-of-use/index.html` - RU/EN terms of use
 
 ## Quick publish flow
 
@@ -30,3 +31,7 @@ git push -u origin main
 5. Site URL will be:
 
 `https://<YOUR_USERNAME>.github.io/<YOUR_REPO>/privacy-policy/`
+
+Terms page:
+
+`https://<YOUR_USERNAME>.github.io/<YOUR_REPO>/terms-of-use/`
