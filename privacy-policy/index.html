@@ -108,7 +108,7 @@
         <p class="meta">
           Приложение: <strong>Who Is AI?</strong><br />
           Дата вступления в силу: <strong>24 марта 2026</strong><br />
-          Последнее обновление: <strong>30 марта 2026</strong>
+          Последнее обновление: <strong>6 мая 2026</strong>
         </p>
         <p>
           Настоящая Политика конфиденциальности описывает, как
@@ -159,6 +159,18 @@
             Google Play Billing и Apple In-App Purchase для покупок в
             приложении.
           </li>
+          <li>
+            Cloudflare Workers, Cloudflare KV и Cloudflare Durable Objects —
+            хостинг и инфраструктура нашего собственного бэкенда
+            (онлайн-комнаты, обработка платежей в Telegram Mini App).
+            Cloudflare обрабатывает технические данные соединения
+            (IP-адрес, заголовки запросов) для маршрутизации трафика.
+          </li>
+          <li>
+            Telegram Bot API — приём платежей звёздами Telegram и
+            отправка сервисных уведомлений (только в Telegram Mini
+            App-версии).
+          </li>
         </ul>
         <p>
           Эти сервисы могут обрабатывать технические данные устройства и данные
@@ -166,6 +178,48 @@
           идентификаторы приложения и устройства, события в приложении, сведения
           о взаимодействии с рекламой, диагностические данные и данные
           транзакций) в соответствии со своими политиками.
+        </p>
+
+        <h3>2.3. Онлайн-режим (опционально)</h3>
+        <p>
+          При использовании режима онлайн-игры (комнаты на разных
+          устройствах) на наш бэкенд (хостинг Cloudflare) временно
+          передаётся:
+        </p>
+        <ul>
+          <li>
+            введённый игроком ник — он будет виден другим участникам
+            одной игровой комнаты;
+          </li>
+          <li>
+            игровые действия в течение партии — они раскрываются другим
+            участникам комнаты только в той мере, которую требует игровая
+            механика (публичное состояние лобби и партии, прогресс
+            голосования, публичная часть программных модулей, итоговые
+            результаты);
+          </li>
+          <li>
+            случайно сгенерированный токен для повторного подключения
+            при разрыве сети.
+          </li>
+        </ul>
+        <p>
+          Серверное состояние комнаты автоматически удаляется через
+          24 часа. Между разными комнатами и партиями данные не
+          пересекаются. Переписка между игроками в онлайн-режиме не
+          предусмотрена.
+        </p>
+
+        <h3>2.4. Доступ к камере</h3>
+        <p>
+          В онлайн-режиме приложение может предложить отсканировать
+          QR-код с кодом игровой комнаты. Камера запускается только
+          по явному действию пользователя (нажатие кнопки сканера) и
+          используется исключительно для этого сканирования.
+          Изображения с камеры не сохраняются и никуда не
+          передаются — распознавание происходит локально на
+          устройстве, а на наш бэкенд уходит только получившийся
+          текстовый код комнаты.
         </p>
 
         <h2>3. Цели обработки</h2>
@@ -185,6 +239,15 @@
         </p>
         <ul>
           <li>поставщикам рекламы и платежной инфраструктуры;</li>
+          <li>
+            провайдеру хостинга нашего бэкенда (Cloudflare) — для работы
+            серверной части онлайн-режима и обработки платежей в
+            Telegram Mini App;
+          </li>
+          <li>
+            другим игрокам, находящимся с вами в одной онлайн-комнате —
+            в объёме, необходимом для игрового процесса (см. п. 2.3);
+          </li>
           <li>в случаях, предусмотренных применимым законодательством.</li>
         </ul>
 
@@ -193,6 +256,16 @@
           <li>
             Локальные данные хранятся на устройстве до удаления приложения или
             очистки данных приложения пользователем.
+          </li>
+          <li>
+            Состояние онлайн-комнаты хранится на нашем бэкенде не более
+            24 часов с момента создания и автоматически удаляется по
+            истечении этого срока.
+          </li>
+          <li>
+            Локальные учётные данные онлайн-комнаты (код комнаты, токен)
+            хранятся на устройстве до 2 часов и затем стираются
+            автоматически.
           </li>
           <li>
             Данные, обрабатываемые сторонними провайдерами (реклама/платежи),
@@ -265,6 +338,18 @@
               >https://www.apple.com/legal/privacy/</a
             >
           </li>
+          <li>
+            Cloudflare Privacy Policy:
+            <a href="https://www.cloudflare.com/privacypolicy/"
+              >https://www.cloudflare.com/privacypolicy/</a
+            >
+          </li>
+          <li>
+            Telegram Privacy Policy:
+            <a href="https://telegram.org/privacy"
+              >https://telegram.org/privacy</a
+            >
+          </li>
         </ul>
       </section>
 
@@ -273,7 +358,7 @@
         <p class="meta">
           App: <strong>Who Is AI?</strong><br />
           Effective date: <strong>March 24, 2026</strong><br />
-          Last updated: <strong>March 30, 2026</strong>
+          Last updated: <strong>May 6, 2026</strong>
         </p>
         <p>
           This Privacy Policy explains how
@@ -318,12 +403,61 @@
           <li>
             Google Play Billing and Apple In-App Purchase for in-app purchases.
           </li>
+          <li>
+            Cloudflare Workers, Cloudflare KV, and Cloudflare Durable Objects
+            — hosting and infrastructure for our own backend (online rooms
+            and Telegram Mini App payments). Cloudflare processes
+            connection-level technical data (IP address, request headers) to
+            route traffic.
+          </li>
+          <li>
+            Telegram Bot API — to accept Telegram Stars payments and send
+            service notifications (Telegram Mini App version only).
+          </li>
         </ul>
         <p>
           These providers may process technical and interaction data (for
           example advertising identifier, IP address, app and device
           identifiers, in-app events, ad interaction data, diagnostic data, and
           transaction data) under their own privacy policies.
+        </p>
+
+        <h3>2.3. Online mode (optional)</h3>
+        <p>
+          When you use the online room mode (each player on their own
+          device), our backend (hosted on Cloudflare) temporarily receives:
+        </p>
+        <ul>
+          <li>
+            the nickname you entered — it is visible to the other
+            participants of the same room;
+          </li>
+          <li>
+            in-game actions during a match — they are revealed to other
+            participants of the room only to the extent required by
+            gameplay (public lobby and game state, vote progress, public
+            module information, final results);
+          </li>
+          <li>
+            a randomly generated token used to reconnect after a network
+            interruption.
+          </li>
+        </ul>
+        <p>
+          Server-side room state is automatically deleted after 24 hours.
+          Data does not carry over between different rooms or matches.
+          The online mode does not include any messaging between players.
+        </p>
+
+        <h3>2.4. Camera access</h3>
+        <p>
+          In the online mode, the app may offer to scan a QR code that
+          contains a game-room join code. The camera is launched only
+          on an explicit user action (tapping the scanner button) and
+          is used solely for this scan. Camera frames are neither
+          saved nor transmitted — recognition happens locally on the
+          device, and only the resulting text room code is sent to our
+          backend.
         </p>
 
         <h2>3. Why data is used</h2>
@@ -340,6 +474,15 @@
         <p>We do not sell users' personal data. Data may be shared only:</p>
         <ul>
           <li>with advertising and payment infrastructure providers;</li>
+          <li>
+            with our backend hosting provider (Cloudflare) — to operate the
+            server side of the online mode and to process Telegram Mini App
+            payments;
+          </li>
+          <li>
+            with other players in the same online room — in the scope
+            necessary for the game to work (see section 2.3);
+          </li>
           <li>when required by applicable law.</li>
         </ul>
 
@@ -348,6 +491,15 @@
           <li>
             Local data remains on the device until the app is removed or app
             data is cleared by the user.
+          </li>
+          <li>
+            Online room state is retained on our backend for up to 24 hours
+            from creation and is automatically deleted after that period.
+          </li>
+          <li>
+            Local online-room credentials (room code, session token) are
+            retained on the device for up to 2 hours and then erased
+            automatically.
           </li>
           <li>
             Data processed by third parties (ads/payments) is retained under
@@ -416,6 +568,18 @@
             Apple Privacy Policy:
             <a href="https://www.apple.com/legal/privacy/"
               >https://www.apple.com/legal/privacy/</a
+            >
+          </li>
+          <li>
+            Cloudflare Privacy Policy:
+            <a href="https://www.cloudflare.com/privacypolicy/"
+              >https://www.cloudflare.com/privacypolicy/</a
+            >
+          </li>
+          <li>
+            Telegram Privacy Policy:
+            <a href="https://telegram.org/privacy"
+              >https://telegram.org/privacy</a
             >
           </li>
         </ul>
